@@ -24,3 +24,11 @@ Database schema
 |email             |order number
 |mailing address   |date
 |name              |customer_id
+
+## Step 4:
+Generate the models
+(See ./db and ./app/models)
+
+## Step 5:
+Create the associations
+(see ./app/models)
