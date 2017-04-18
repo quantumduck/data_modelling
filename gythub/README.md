@@ -22,14 +22,14 @@ or zero repositories.
 ## Step 3:
 Database schema.
 
-|users          |repositories  |repositories_users
+|users          |repositories  |repositories_users 
 |=======        |============  |==================
 |id             |id            |user_id
 |name           |name          |repository_id
 |email          |path
                 |creator_id
                 |fork_id
-                
+
 ## Step 4:
 Generate the models
 (See ./db and ./app/models)
