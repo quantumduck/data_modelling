@@ -1,24 +1,53 @@
-# README
+# Doctor's Appointment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Question 3 from Bitmaker assignment April 18, 2017.
 
-Things you may want to cover:
+## Step 1:
+There could be much more information on the patients using associated objects,
+but I will not implement this for now.
 
-* Ruby version
+|doctors        |patients    |appointments   
+|=======        |========    |============
+|name           |name        |date
+|specialty      |age         |start_time
+                             |length
+                             |type
 
-* System dependencies
+## Step 2:
+Each doctor can have many patients. Each patient can have many doctors, although
+they can only have one primary care physician at a time. For simplicity, we will
+assume that each appointment is one-on-one (no clinics).
 
-* Configuration
+Therefore, there is a many to many association between doctors and patients
+through the appointments that they book.
 
-* Database creation
+There is a one to many association between doctors and patients as well, but this
+one needs to have a different association name.
 
-* Database initialization
+## Step 3:
+Database schema
 
-* How to run the test suite
+|doctors      |patients    |appointments   
+|=======      |========    |============
+|id           |id          |id
+|name         |name        |date
+|specialty    |age         |start_time
+              |pcp_id      |length
+                           |type
+                           |doctor_id
+                           |patient_id
 
-* Services (job queues, cache servers, search engines, etc.)
+## Step 4:
+Generate the models
+(See ./db and ./app/models)
 
-* Deployment instructions
+## Step 5:
+Create the associations
+(see ./app/models)
 
-* ...
+## Checks:
+``` Ruby
+
+
+
+```
