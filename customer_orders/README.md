@@ -1,24 +1,26 @@
-# README
+# Customers and Orders
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Question 1 from Bitmaker assignment April 18, 2017.
 
-Things you may want to cover:
+## Step 1:
+The models are already present:
 
-* Ruby version
+|Customers         |Orders
+|=========         |======
+|email             |order number
+|mailing address   |date
+|name
 
-* System dependencies
+## Step 2:
+Each Customer can make many orders. Each Order is created by one Customer.
+Therefore, there is a one to many relationship between Customers and Orders.
 
-* Configuration
+## Step 3:
+Database schema
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+|Customers         |Orders
+|=========         |======
+|id                |id
+|email             |order number
+|mailing address   |date
+|name              |customer_id
