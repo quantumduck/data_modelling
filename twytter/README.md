@@ -26,7 +26,7 @@ Database schema.
 |=======        |============  |========   =============
 |id             |id            |id         |leader_id
 |name           |contents      |source_id  |follower_id
-|email          |creator_id    |user_id
+|email          |user_id       |user_id
 
 ## Step 4:
 Generate the models
