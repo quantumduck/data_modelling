@@ -7,5 +7,9 @@ class User < ApplicationRecord
     created_repositories.create(name: repo.name, path: repo.path, creator_id: self.id, fork_id: repo.id)
   end
 
+  def create_repository(name: name, path: path)
+    created_repositories.create(name: name, path: path, creator_id: self.id, fork_id: 0)
+  end
+
 
 end
