@@ -1,6 +1,6 @@
-# Doctor's Appointment
+# Eventbryte
 
-Question 3 from Bitmaker assignment April 18, 2017.
+Question 4 from Bitmaker assignment April 18, 2017.
 
 ## Step 1:
 There can be different classes for hosts and guests, but people will perform
