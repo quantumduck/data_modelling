@@ -6,14 +6,9 @@ class User < ApplicationRecord
     association_foreign_key: "follower_id",
     join_table: "follow_pairs"
   has_many :retweets
-  has_many :retweeters, through: :retweets,
-    class_name: "User",
-    foreign_key: "user_id",
-    source: "source"
+  has_many :retweeters, through: :tweets
   has_many :retweeted_tweets, through: :retweets,
-    class_name: "Tweet",
-    foreign_key: "source_id",
-    source: "user"
+    source: :source
 
     def follow(user)
       user.followers << self
